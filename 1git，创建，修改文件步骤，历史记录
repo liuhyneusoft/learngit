@@ -1,0 +1,31 @@
+创建版本库在repository目录中创建git，完成后有一个.git目录（是Git的版本库）。
+$ git init
+
+配置
+$ git config user.name "liu.haiyang"
+$ git config user.email "liu.haiyang@linecrop.com"
+
+
+在git目录创建一个文件。readme.txt,文件创建后
+git add readme.txt   		#一次可以添加多个文件。
+git commit -m "comment"     #commit可以认为是完成一次事务。
+
+修改readme.txt
+git status 掌握仓库当前的状态
+
+可以看到readme.txt被修改了。
+ git diff 查看变化
+
+
+提交修改和添加步骤一致
+git add readme.txt
+git commit -m “comment”
+然后在看状态
+
+
+历史记录，命令显示从最近到最远的提交日志
+git  log readme.txt
+
+
+git log --pretty=oneline readme.txt 
+
