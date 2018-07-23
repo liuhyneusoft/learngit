@@ -1,0 +1,18 @@
+在分支下
+$ git tag v1.0
+默认标签是打在最新提交的commit上的
+
+如果忘了打标签，给某个commit打tag
+git tag v0.9 f52c633
+
+删除标签，标签都只存储在本地，不会自动推送到远程。所以，打错的标签可以在本地安全删除
+git tag -d v0.1
+
+推送标签到远程，推送所有标签
+git push origin v1.0
+git push origin --tags
+小结
+命令git push origin <tagname>可以推送一个本地标签；
+命令git push origin --tags可以推送全部未推送过的本地标签；
+命令git tag -d <tagname>可以删除一个本地标签；
+命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
