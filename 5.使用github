@@ -1,0 +1,39 @@
+打开git bash
+
+$ ssh-keygen -t rsa -C "176971923@qq.com"
+一路回车之后再c/Users/Naver/.ssh 目录下会有两个文件id_rsa是私钥，id_rsa.pub是公钥
+
+登陆GitHub后在个人设置中找到 SSH Key
+
+
+new SSH Key，使用id_rsa.pub文件的内容。
+GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。
+
+推送至远程
+本地创建文件夹  git init
+拷贝代码到这里
+git add .   
+git commit -m "comment"
+git remote add origin https://github.com/liuhyneusoft/flask-demo.git
+git push -u origin master
+
+克隆
+准备工作：在文件夹下git init，然后clone 两种方法
+git clone git@github.com:liuhyneusoft/java8.git
+git clone https://github.com/liuhyneusoft/cxf-rest-demo.git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
